@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<a href="contact.vcf" class="btn" style="background: var(--primary);">💾 Enregistrer le contact</a>
-    <title>Arc² - Consultation & Compliance</title>
-<style>
+    <title>Arc² - Consultation et conformité</title>
+    <style>
         :root {
-            --primary: #2ecc71; /* Le vert nature */
+            --primary: #2ecc71;
             --dark: #1a1a1a;
             --white: #ffffff;
-            --bg: var(--dark);
-            --text: var(--white);
+            --bg: #1a1a1a;
+            --text: #ffffff;
         }
 
-        /* Adaptation automatique Mode Clair / Mode Sombre */
         @media (prefers-color-scheme: light) {
             :root {
                 --bg: #f9f9f9;
@@ -33,41 +31,48 @@
             min-height: 100vh;
             margin: 0;
             transition: 0.3s;
+            text-align: center;
         }
 
         .profile-container {
             padding: 20px;
             width: 90%;
             max-width: 400px;
-            text-align: center;
         }
 
-        /* Style du Logo ARC² */
-    h1 { 
-        margin: 10px 0; 
-        font-size: 3rem; 
-        font-weight: 800;
-        letter-spacing: -1px;
-        /* La couleur de ARC s'adapte au texte (blanc ou noir) */
-        color: var(--text); 
-    }
+        h1 {
+            margin: 10px 0;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--text);
+        }
 
-    .carre-vert {
-        /* On force le vert ici avec !important pour être sûr */
-        color: #2ecc71 !important; 
-        font-size: 3.5rem; 
-        vertical-align: top;
-        line-height: 1;
-        display: inline-block;
-    }
+        /* LA CORRECTION POUR LE VERT */
+        .carre-vert {
+            color: #2ecc71 !important;
+            display: inline-block;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
         .description {
             opacity: 0.8;
             margin-bottom: 30px;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             line-height: 1.4;
         }
 
-        /* Le QR Code interactif */
         .qr-wrapper {
             background: white;
             padding: 15px;
@@ -76,7 +81,6 @@
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 30px;
-            transition: transform 0.2s;
         }
 
         .qr-wrapper img {
@@ -85,7 +89,6 @@
             display: block;
         }
 
-        /* Effet Plein Écran */
         .qr-wrapper.fullscreen {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -95,17 +98,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 0;
-            padding: 0;
         }
 
         .qr-wrapper.fullscreen img {
             width: 85vw;
             height: 85vw;
-            max-width: 500px;
         }
 
-        /* Boutons */
         .links {
             display: grid;
             gap: 12px;
@@ -120,44 +119,31 @@
             border-radius: 15px;
             border: 1px solid rgba(128, 128, 128, 0.3);
             font-weight: 600;
-            transition: 0.2s;
         }
 
-        .btn-primary {
+        .btn-contact {
             background: var(--primary);
             color: white;
             border: none;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            background: rgba(46, 204, 113, 0.2);
-            color: var(--primary);
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="profile-container">
-        <div class="tag">Consultant & Compliance</div>
-        <h1>Arc²</h1>
-        <p>RPGD, Alerte interne, Deontologie, LCB-FT, LEAP, ESG, Décret tertiaire, expertise d'assuré, contrôle documentaire</p>
+        <div class="tag">Consultant et conformité</div>
+        
+        <h1>Arc<span class="carre-vert">²</span></h1>
+        
+        <p class="description">RGPD, Alerte interne, Déontologie, LCB-FT, LEAP, ESG, Décret tertiaire, expertise d'assuré, contrôle documentaire</p>
 
-        <div class="qr-wrapper" onclick="toggleQR(this)">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://votre-site-ou-vcard.com" alt="QR Code">
+        <div class="qr-wrapper" onclick="this.classList.toggle('fullscreen')">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://rocchialexandre-source.github.io/arc2/" alt="Code QR">
             <div style="color: black; font-size: 0.7rem; margin-top: 5px;">Cliquer pour agrandir</div>
         </div>
 
         <div class="links">
+            <a href="./contact.vcf" class="btn btn-contact">💾 Enregistrer le contact</a>
             <a href="tel:0623159670" class="btn">📞 Appeler</a>
             <a href="https://www.arc2.fr" class="btn" style="border: 2px solid var(--primary);">🌐 Visiter mon Site Web</a>
             <a href="mailto:alexandre.rocchi.arc2@gmail.com" class="btn">📧 Envoyer un Email</a>
@@ -165,10 +151,5 @@
         </div>
     </div>
 
-    <script>
-        function toggleQR(el) {
-            el.classList.toggle('fullscreen');
-        }
-    </script>
 </body>
 </html>
