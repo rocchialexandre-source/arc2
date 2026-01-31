@@ -2,12 +2,9 @@ BEGIN:VCARD
 VERSION:3.0
 FN:Arc² - Consultant & Compliance
 ORG:Arc²
-TITLE: Consultant & Compliance
-TEL;TYPE=CELL:06.23.15.96.70
+TITLE:Consultant & Compliance
+TEL;TYPE=CELL:+33623159670
 EMAIL:alexandre.rocchi.arc2@gmail.com
 URL:https://www.arc2.fr
-NOTE:
-- RGPD, Alerte interne, Déontologie, LCB-FT, LEAP, ESG, Décret tertiaire, expertise d'assuré, contrôle documentaire.
-- France-International
+NOTE:Expertises : RGPD, Alerte interne, Déontologie, LCB-FT, LEAP, ESG, Décret tertiaire, expertise d'assuré, contrôle documentaire. France-International.
 END:VCARD
-
