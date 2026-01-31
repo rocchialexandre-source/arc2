@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <a href="contact.vcf" class="btn" style="background: var(--primary);">💾 Enregistrer le contact</a>
     <title>Arc² - Consultation & Compliance</title>
-    <style>
-:root {
+<style>
+        :root {
             --primary: #2ecc71; /* Le vert nature */
             --dark: #1a1a1a;
             --white: #ffffff;
@@ -56,42 +56,29 @@
             vertical-align: top;
             line-height: 1;
         }
-        body {
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--dark);
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            text-align: center;
+
+        .description {
+            opacity: 0.8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.4;
         }
 
-        .profile-container {
-            padding: 20px;
-            width: 90%;
-            max-width: 400px;
-        }
-
-        h1 { margin-bottom: 5px; font-size: 2rem; color: var(--primary); }
-        p { opacity: 0.8; margin-bottom: 30px; }
-
-        /* Le QR Code */
+        /* Le QR Code interactif */
         .qr-wrapper {
             background: white;
             padding: 15px;
             border-radius: 20px;
             display: inline-block;
             cursor: pointer;
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 30px;
+            transition: transform 0.2s;
         }
 
         .qr-wrapper img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             display: block;
         }
 
@@ -113,36 +100,45 @@
             width: 85vw;
             height: 85vw;
             max-width: 500px;
-            max-height: 500px;
         }
 
-        /* Boutons de contact */
+        /* Boutons */
         .links {
             display: grid;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
         }
 
         .btn {
-            background: rgba(255,255,255,0.1);
-            color: white;
+            background: rgba(128, 128, 128, 0.1);
+            color: var(--text);
             text-decoration: none;
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
-            font-weight: bold;
-            transition: 0.3s;
+            padding: 16px;
+            border-radius: 15px;
+            border: 1px solid rgba(128, 128, 128, 0.3);
+            font-weight: 600;
+            transition: 0.2s;
         }
 
-        .btn:hover { background: var(--primary); border-color: var(--primary); }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+        }
 
         .tag {
-            font-size: 0.8rem;
-            background: var(--primary);
-            padding: 4px 10px;
-            border-radius: 20px;
-            margin-top: 10px;
-            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: bold;
         }
     </style>
 </head>
