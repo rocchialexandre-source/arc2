@@ -43,20 +43,23 @@
         }
 
         /* Style du Logo ARC² */
-        h1 { 
-            margin: 10px 0; 
-            font-size: 3rem; 
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
+    h1 { 
+        margin: 10px 0; 
+        font-size: 3rem; 
+        font-weight: 800;
+        letter-spacing: -1px;
+        /* La couleur de ARC s'adapte au texte (blanc ou noir) */
+        color: var(--text); 
+    }
 
-        .carre-vert {
-            color: var(--primary);
-            font-size: 3.5rem; /* Un peu plus grand pour ressortir */
-            vertical-align: top;
-            line-height: 1;
-        }
-
+    .carre-vert {
+        /* On force le vert ici avec !important pour être sûr */
+        color: #2ecc71 !important; 
+        font-size: 3.5rem; 
+        vertical-align: top;
+        line-height: 1;
+        display: inline-block;
+    }
         .description {
             opacity: 0.8;
             margin-bottom: 30px;
